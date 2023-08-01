@@ -4,7 +4,7 @@ echo "[Inception-MariaDB] Initializing the database"
 
 mysql_install_db
 
-mysqld --bind-address=127.0.0.1 --user=root --datadir=/data --skip-networking=0 &
+mysqld --bind-address=127.0.1.1 --user=root --datadir=/data --skip-networking=0 &
 SQL_PID=$!
 
 sleep 1

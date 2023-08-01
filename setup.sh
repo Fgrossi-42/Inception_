@@ -30,7 +30,7 @@ echo -e $GREEN "Done." $BLANK
 
 if grep -q $DOMAIN /etc/host; then
 	echo -e $PURPLE "Setting up $DOMAIN as localhost"
-	sudo echo "127.0.0.1	$DOMAIN" >> /etc/hosts
+	sudo echo "127.0.1.1	$DOMAIN" >> /etc/hosts
 	echo -e $GREEN "Done." $BLANK
 fi
 
