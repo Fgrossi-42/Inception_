@@ -47,7 +47,7 @@ else
 fi
 
 echo "[Inception-Wordpress] Updating PHP-FPM configuration"
-sed "s/127.1.1.3:9000/0.0.0.0:9000/1" -i -r /etc/php81/php-fpm.d/www.conf
+sed "s/127.1.1.1:9000/0.0.0.0:9000/1" -i -r /etc/php81/php-fpm.d/www.conf
 
 echo "[Inception-Wordpress] Starting PHP-FPM"
 /usr/sbin/php-fpm81 -F
