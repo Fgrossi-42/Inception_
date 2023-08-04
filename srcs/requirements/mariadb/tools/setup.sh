@@ -12,7 +12,7 @@ sleep 1
 echo "[Inception-MariaDB] Creating user and databases"
 echo "CREATE USER '$MYSQL_USERNAME'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';" | mysql -u root
 
-echo "CREATE DATABASE $MYSQL_WORDPRESS_DATABASE;" | mysql -u root
+echo "CREATE DATABASE IF NOT EXISTS $MYSQL_WORDPRESS_DATABASE;" | mysql -u root
 
 echo "GRANT ALL PRIVILEGES ON wordpress.* TO '$MYSQL_USERNAME'@'%';" | mysql -u root
 
